@@ -1,32 +1,43 @@
 extends KinematicBody2D
 
-export (int) var run_speed = 300
-export (int) var jump_speed = -400
-export (int) var gravity = 10000000
+const TARGET_FPS = 60
+const ACCELERATION = 10
+const MAX_SPEED = 1000
+const FRICTION = 10
+const AIR_RESISTANCE = 1
+const GRAVITY = 10
+const JUMP_FORCE = 1000
 
-var velocity = Vector2()
-var jumping = false
+var motion = Vector2.ZERO
 
-func get_input():
-	velocity.x = 0
-	var right = Input.is_action_pressed('ui_right')
-	var left = Input.is_action_pressed('ui_left')
-	var jump = Input.is_action_just_pressed('ui_select')
-
-	if jump and is_on_floor():
-		jumping = true
-		velocity.y = jump_speed
-	if right:
-		velocity.x += run_speed
-	if left:
-		velocity.x -= run_speed
+onready var sprite = $Sprite
+onready var animationPlayer = $AnimationPlayer
 
 func _physics_process(delta):
-	get_input()
-	velocity.y += gravity * delta
-	if jumping and is_on_floor():
-		jumping = false
-	velocity = move_and_slide(velocity, Vector2(0, -1))
+	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	
+	if x_input != 0:
+	
+		motion.x += x_input * ACCELERATION * delta * TARGET_FPS
+		motion.x = clamp(motion.x, -MAX_SPEED, MAX_SPEED)
+	
+	motion.y += GRAVITY * delta * TARGET_FPS
+	
+	if is_on_floor():
+		if x_input == 0:
+			motion.x = lerp(motion.x, 0, FRICTION * delta)
+			
+		if Input.is_action_just_pressed("ui_up"):
+			motion.y = -JUMP_FORCE
+	else:
+		
+		if Input.is_action_just_released("ui_up") and motion.y < -JUMP_FORCE/2:
+			motion.y = -JUMP_FORCE/2
+		
+		if x_input == 0:
+			motion.x = lerp(motion.x, 0, AIR_RESISTANCE * delta)
+	
+	motion = move_and_slide(motion, Vector2.UP)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

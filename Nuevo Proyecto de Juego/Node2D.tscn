@@ -38,7 +38,6 @@ extents = Vector2( 675.01, 10 )
 [node name="player" type="KinematicBody2D" parent="."]
 position = Vector2( 40.9994, 551.625 )
 script = ExtResource( 1 )
-gravity = 381
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 visible = false
