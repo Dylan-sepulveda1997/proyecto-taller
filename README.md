@@ -1,5 +1,3 @@
 # proyecto taller
- el juego the game
+ ROOMIES el juego otaku para gente otaku
 
-jasdvsdsdhjklsdfb nasdfvdfdfbjh
-uwu
