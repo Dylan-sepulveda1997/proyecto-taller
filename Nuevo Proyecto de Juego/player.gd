@@ -43,3 +43,12 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+ # Replace with function body.
+
+
+func _on_Area2D_body_entered(body):
+	if body.get_name()=="player":
+		get_tree().change_scene("res://escenas/2/Node2D.tscn")
+	pass # Replace with function body.
