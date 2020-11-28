@@ -31,6 +31,10 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_select"):
 			motion.y = -JUMP_FORCE
 	else:
+		if motion.x>= 0:
+			$Sprite.set_flip_h(false)
+		else:
+			$Sprite.set_flip_h(true)
 		
 		if Input.is_action_just_released("ui_select") and motion.y < -JUMP_FORCE/2:
 			motion.y = -JUMP_FORCE/2
@@ -43,12 +47,3 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
- # Replace with function body.
-
-
-func _on_Area2D_body_entered(body):
-	if body.get_name()=="player":
-		get_tree().change_scene("res://escenas/2/Node2D.tscn")
-	pass # Replace with function body.
