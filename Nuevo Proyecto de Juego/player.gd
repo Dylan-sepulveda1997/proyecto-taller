@@ -14,6 +14,8 @@ var motion = Vector2.ZERO
 onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
 
+var contadorMonedaVerde = 0
+
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
