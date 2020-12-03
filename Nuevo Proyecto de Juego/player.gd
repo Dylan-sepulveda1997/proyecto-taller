@@ -2,12 +2,12 @@ extends KinematicBody2D
 
 const TARGET_FPS = 60
 
-const ACCELERATION = 15
-const MAX_SPEED = 200
-const FRICTION = 20
-const AIR_RESISTANCE = 0
-const GRAVITY = 25
-const JUMP_FORCE = 600
+const ACCELERATION = 10
+const MAX_SPEED = 150
+const FRICTION = 15
+const AIR_RESISTANCE = 2
+const GRAVITY = 30
+const JUMP_FORCE = 500
 
 var motion = Vector2.ZERO
 
