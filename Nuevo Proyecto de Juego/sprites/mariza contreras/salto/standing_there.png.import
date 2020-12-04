@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MeheadphonesHit.png-34e9e7bd3263fb5d0c571d1d8be859d4.stex"
+path="res://.import/standing_there.png-99ab47b9b8fabbb87a41079656864777.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/mariza contreras/MeheadphonesHit.png"
-dest_files=[ "res://.import/MeheadphonesHit.png-34e9e7bd3263fb5d0c571d1d8be859d4.stex" ]
+source_file="res://sprites/mariza contreras/salto/standing_there.png"
+dest_files=[ "res://.import/standing_there.png-99ab47b9b8fabbb87a41079656864777.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

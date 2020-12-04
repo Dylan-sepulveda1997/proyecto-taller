@@ -35,4 +35,5 @@ playback_speed = 4.0
 anims/coinverde = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -0.166855 )
 shape = SubResource( 2 )
