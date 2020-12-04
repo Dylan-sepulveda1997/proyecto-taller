@@ -54,3 +54,12 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Area2D4_body_entered(body):
+	if body.get_name()=="player":
+		if contadorMonedaVerde >=1 :
+			get_tree().change_scene("res://escenas/2/dialogo1.tscn")
+		else:
+			get_tree().change_scene("res://escenas/2/dialogbox.tscn")
+	pass # Replace with function body.
