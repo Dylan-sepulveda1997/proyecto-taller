@@ -15,12 +15,15 @@ onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
 
 var contadorMonedaVerde = 0
+func _ready():
+	
+	$AnimationPlayer.play("IDLE")
 
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
 	if x_input != 0:
-	
+		$AnimationPlayer.play("RUN")
 		motion.x += x_input * ACCELERATION * delta * TARGET_FPS
 		motion.x = clamp(motion.x, -MAX_SPEED, MAX_SPEED)
 	
@@ -31,6 +34,7 @@ func _physics_process(delta):
 			motion.x = lerp(motion.x, 0, FRICTION * delta)
 			
 		if Input.is_action_just_pressed("ui_select"):
+			$AnimationPlayer.play("JUMP")
 			motion.y = -JUMP_FORCE
 	else:
 		if motion.x>= 0:
@@ -42,6 +46,7 @@ func _physics_process(delta):
 			motion.y = -JUMP_FORCE/2
 		
 		if x_input == 0:
+			$AnimationPlayer.play("IDLE")
 			motion.x = lerp(motion.x, 0, AIR_RESISTANCE * delta)
 	
 	motion = move_and_slide(motion, Vector2.UP)

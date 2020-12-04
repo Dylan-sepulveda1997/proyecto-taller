@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MeheadphonesHit.png-34e9e7bd3263fb5d0c571d1d8be859d4.stex"
+path="res://.import/MeHeadPhonesStandingThere.png-2a6c5e84b9133e916cd4c8a96fa3d206.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/mariza contreras/MeheadphonesHit.png"
-dest_files=[ "res://.import/MeheadphonesHit.png-34e9e7bd3263fb5d0c571d1d8be859d4.stex" ]
+source_file="res://sprites/mariza contreras/salto/MeHeadPhonesStandingThere.png"
+dest_files=[ "res://.import/MeHeadPhonesStandingThere.png-2a6c5e84b9133e916cd4c8a96fa3d206.stex" ]
 
 [params]
 
