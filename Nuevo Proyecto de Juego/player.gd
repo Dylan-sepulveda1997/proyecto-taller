@@ -23,6 +23,10 @@ func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
 	if x_input != 0:
+		if motion.x > 0:
+			$Sprite.set_flip_h(false)
+		else:
+			$Sprite.set_flip_h(true)
 		$AnimationPlayer.play("RUN")
 		motion.x += x_input * ACCELERATION * delta * TARGET_FPS
 		motion.x = clamp(motion.x, -MAX_SPEED, MAX_SPEED)
@@ -31,13 +35,14 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		if x_input == 0:
+			$AnimationPlayer.play("IDLE")
 			motion.x = lerp(motion.x, 0, FRICTION * delta)
 			
 		if Input.is_action_just_pressed("ui_select"):
 			$AnimationPlayer.play("JUMP")
 			motion.y = -JUMP_FORCE
 	else:
-		if motion.x>= 0:
+		if motion.x > 0:
 			$Sprite.set_flip_h(false)
 		else:
 			$Sprite.set_flip_h(true)
@@ -59,7 +64,9 @@ func _physics_process(delta):
 func _on_Area2D4_body_entered(body):
 	if body.get_name()=="player":
 		if contadorMonedaVerde >=1 :
-			get_tree().change_scene("res://escenas/2/dialogo1.tscn")
+			get_tree().change_scene("res://escenas/2/escena1svpelacion.tscn")
+		#elif contadorMonedaVerde >=2:
+		#	get_tree().change_scene("res://escenas/2/dialogo2.tscn")
 		else:
-			get_tree().change_scene("res://escenas/2/dialogbox.tscn")
+			get_tree().change_scene("res://escenas/2/escena1sv.tscn")
 	pass # Replace with function body.
