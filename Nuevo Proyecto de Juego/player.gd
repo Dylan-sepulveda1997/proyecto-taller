@@ -59,7 +59,9 @@ func _physics_process(delta):
 func _on_Area2D4_body_entered(body):
 	if body.get_name()=="player":
 		if contadorMonedaVerde >=1 :
-			get_tree().change_scene("res://escenas/2/dialogo1.tscn")
+			get_tree().change_scene("res://escenas/2/escena1svpelacion.tscn")
+		#elif contadorMonedaVerde >=2:
+		#	get_tree().change_scene("res://escenas/2/dialogo2.tscn")
 		else:
-			get_tree().change_scene("res://escenas/2/dialogbox.tscn")
+			get_tree().change_scene("res://escenas/2/escena1sv.tscn")
 	pass # Replace with function body.
