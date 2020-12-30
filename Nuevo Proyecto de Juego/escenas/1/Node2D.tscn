@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://sprites/title set/tilesetv2agregado.tres" type="TileSet" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://intereses romanticos/pelado2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://MonedaRosa.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/fondos/939716.png" type="Texture" id=10]
+[ext_resource path="res://sprites/intereses romanticos/arturo prat.png" type="Texture" id=11]
 
 [node name="Node2D" type="Node2D"]
 
@@ -65,6 +66,10 @@ position = Vector2( 1468.37, -391.867 )
 
 [node name="Area2D7" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1013, -384.796 )
+
+[node name="arturo prat" type="Sprite" parent="."]
+position = Vector2( 69.3125, -585.898 )
+texture = ExtResource( 11 )
 [connection signal="body_entered" from="sofia" to="player" method="_on_sofia_body_entered"]
 [connection signal="body_entered" from="matias" to="player" method="_on_matias_body_entered"]
 [connection signal="body_exited" from="gonzalo" to="player" method="_on_gonzalo_body_exited"]

@@ -3,7 +3,7 @@
 [ext_resource path="res://escenas/4/escenaprologotv.gd" type="Script" id=1]
 [ext_resource path="res://Simple Dialog Box/UI_SF_01.png" type="Texture" id=2]
 [ext_resource path="res://Simple Dialog Box/Retro Gaming.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://loop/Patricia Taxxon - Cilantro (sv) loop.ogg" type="AudioStream" id=4]
+[ext_resource path="res://loop/Patricia Taxxon - Flap Flap (tv) loop.ogg" type="AudioStream" id=4]
 [ext_resource path="res://escenas/2/audiosv1.gd" type="Script" id=5]
 [ext_resource path="res://sprites/mariza contreras/salto/MeHeadPhonesStandingThere.png" type="Texture" id=6]
 [ext_resource path="res://sprites/fondos/trees.png" type="Texture" id=7]
@@ -63,6 +63,9 @@ margin_top = -127.0
 margin_right = -30.0
 margin_bottom = -38.0
 custom_fonts/normal_font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
