@@ -3,7 +3,7 @@
 [ext_resource path="res://escenas/4/escenaprologosv.gd" type="Script" id=1]
 [ext_resource path="res://Simple Dialog Box/UI_SF_01.png" type="Texture" id=2]
 [ext_resource path="res://Simple Dialog Box/Retro Gaming.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://loop/Patricia Taxxon - Cilantro (sv) loop.ogg" type="AudioStream" id=4]
+[ext_resource path="res://loop/Patricia Taxxon - Flap Flap (tv) loop.ogg" type="AudioStream" id=4]
 [ext_resource path="res://escenas/2/audiosv1.gd" type="Script" id=5]
 [ext_resource path="res://sprites/mariza contreras/salto/MeHeadPhonesStandingThere.png" type="Texture" id=6]
 [ext_resource path="res://sprites/fondos/mountain.png" type="Texture" id=7]
