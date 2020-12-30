@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player1" type="KinematicBody2D" parent="."]
+position = Vector2( 55.4004, 418.962 )
+
+[node name="player1" type="CollisionShape2D" parent="player1"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="player1"]
+
+[node name="Camera2D" type="Camera2D" parent="player1"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_bottom = 600
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true

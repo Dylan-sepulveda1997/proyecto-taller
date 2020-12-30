@@ -18,6 +18,7 @@ var contadorMonedaVerde = 0
 var sv = 0
 var tomas = 0
 var gt = 0
+var contadorMonedaRosa = 0
 func _ready():
 	
 	$AnimationPlayer.play("IDLE")
@@ -71,7 +72,7 @@ func _physics_process(delta):
 
 func _on_gonzalo_body_exited(body):
 	if body.get_name()=="player":
-		if contadorMonedaVerde >=1 :
+		if contadorMonedaRosa >=1 :
 			get_tree().change_scene("res://escenas/2/escena1gtpelacion.tscn")
 		#elif contadorMonedaVerde >=2:
 		#	get_tree().change_scene("res://escenas/2/dialogo2.tscn")
