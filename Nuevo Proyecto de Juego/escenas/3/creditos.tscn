@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Simple Dialog Box/UI_SF_01.png" type="Texture" id=1]
+[ext_resource path="res://Simple Dialog Box/551467.png" type="Texture" id=2]
+[ext_resource path="res://Simple Dialog Box/Retro Gaming.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -37.7202, -2.69739, 0, 0, 0, 0, -44.0976, 1034.31 )
+}
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "moverpath"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1000.0 ]
+}
+
+[node name="Node" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 510.72, 299.697 )
+curve = SubResource( 1 )
+
+[node name="TextureRect2" type="TextureRect" parent="Path2D"]
+margin_left = -980.0
+margin_top = -300.0
+margin_right = 3116.0
+margin_bottom = 1860.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Path2D/TextureRect2"]
+margin_left = 469.0
+margin_top = -64.0
+margin_right = 1495.0
+margin_bottom = 1691.0
+texture = ExtResource( 1 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Path2D/TextureRect2"]
+anchor_left = 0.115
+anchor_right = 0.115
+margin_left = 60.96
+margin_top = 120.0
+margin_right = 962.96
+margin_bottom = 1491.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "                                           wenasssssssssssssss"
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( -43.8652, 996.515 )
+rotation = 1.57695
+offset = 1000.0
+loop = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
+autoplay = "moverpath"
+anims/moverpath = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
+position = Vector2( 2.46536, -37.7361 )
+rotation = -1.57695
+scale = Vector2( 0.996069, 0.966704 )
+current = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="min" type="Position2D" parent="Path2D/PathFollow2D/Camera2D"]
+position = Vector2( -510.424, -300.2 )
+
+[node name="max" type="Position2D" parent="Path2D/PathFollow2D/Camera2D"]
+position = Vector2( 512.637, 296.135 )
