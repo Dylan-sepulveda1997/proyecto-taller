@@ -1,5 +1,4 @@
 extends Control
-var simultaneous_scene = preload("res://escenas/6/FINAL_BUENO.tscn").instance()
 var dialog =["SOY LIBREEEEEEEEEE. MALDITO CONTROL DE TRES HORAS CASI NO DORMI DE LOS NERVIOS PEEO SOBREVIVI FINALMENTE SALVARE CÁLCULO WOOOOO ¡Definitivamente debería conseguirle algo a Sofía para agradecerle! Va a volver más tarde de su presentación de proyecto, probablemente lo apreciará."
  
 ,"Impulsivamente decidí salir a comprar ingredientes para galletas, incluidas unas decoraciones de perlas comestibles rosadas que definitivamente combinarán con el traje con el que salió. No hay duda de que le encantará."
@@ -42,7 +41,7 @@ func load_dialog():
 	if dialog_index < dialog.size():
 		$RichTextLabel.bbcode_text=dialog[dialog_index]
 	if dialog_index == dialog.size():
-		get_tree().get_root().add_child(simultaneous_scene)
+		get_tree().change_scene("res://escenas/1/Node2D.tscn")
 	#	$RichTextLabel.percent_visible=0
 	#else:
 	#	queue_free()

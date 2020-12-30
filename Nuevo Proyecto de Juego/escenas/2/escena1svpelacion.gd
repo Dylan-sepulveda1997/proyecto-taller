@@ -35,7 +35,7 @@ func load_dialog():
 	if dialog_index < dialog.size():
 		$RichTextLabel.bbcode_text=dialog[dialog_index]
 	if dialog_index == dialog.size():
-		get_tree().change_scene("res://escenas/5/eleccion1.tscn")
+		get_tree().change_scene("res://escenas/1/Node2D.tscn")
 	#	$RichTextLabel.percent_visible=0
 	#else:
 	#	queue_free()
