@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://escenas/4/escenaprologotv.gd" type="Script" id=1]
+[ext_resource path="res://Simple Dialog Box/UI_SF_01.png" type="Texture" id=2]
+[ext_resource path="res://Simple Dialog Box/Retro Gaming.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://loop/Patricia Taxxon - Cilantro (sv) loop.ogg" type="AudioStream" id=4]
+[ext_resource path="res://escenas/2/audiosv1.gd" type="Script" id=5]
+[ext_resource path="res://sprites/mariza contreras/salto/MeHeadPhonesStandingThere.png" type="Texture" id=6]
+[ext_resource path="res://sprites/fondos/trees.png" type="Texture" id=7]
+[ext_resource path="res://sprites/intereses romanticos/tomas.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+font_data = ExtResource( 3 )
+
+[node name="dialogbox" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 139.691, 312.718 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 849.645, 296.605 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -168.0
+margin_right = -30.0
+margin_bottom = -4.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 38.0
+margin_top = -127.0
+margin_right = -30.0
+margin_bottom = -38.0
+custom_fonts/normal_font = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+script = ExtResource( 5 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://sprites/title set/tilesetv2agregado.tres" type="TileSet" id=1]
 [ext_resource path="res://player.tscn" type="PackedScene" id=2]
@@ -9,8 +9,19 @@
 [ext_resource path="res://intereses romanticos/pelado3.tscn" type="PackedScene" id=7]
 [ext_resource path="res://intereses romanticos/pelado2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://MonedaRosa.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sprites/fondos/939716.png" type="Texture" id=10]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = -679.0
+margin_right = 2601.0
+margin_bottom = 681.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
