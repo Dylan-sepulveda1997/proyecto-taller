@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://escenas/2/escena2sv.gd" type="Script" id=1]
 [ext_resource path="res://Simple Dialog Box/UI_SF_01.png" type="Texture" id=2]
 [ext_resource path="res://Simple Dialog Box/Retro Gaming.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://loop/Patricia Taxxon -  Would You Please Wake Up (sad) loop.ogg" type="AudioStream" id=4]
 [ext_resource path="res://escenas/2/audiosv2.gd" type="Script" id=5]
+[ext_resource path="res://sprites/mariza contreras/salto/MeHeadPhonesStandingThere.png" type="Texture" id=6]
+[ext_resource path="res://sprites/fondos/mountain.png" type="Texture" id=7]
+[ext_resource path="res://sprites/intereses romanticos/sofia vergara.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 23
@@ -17,6 +20,26 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sofia vergara" type="Sprite" parent="."]
+position = Vector2( 904.173, 304.459 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="MeHeadPhonesStandingThere" type="Sprite" parent="."]
+position = Vector2( 148.57, 299.697 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 6 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_top = 1.0

@@ -7,7 +7,7 @@ var dialog =["SV: Holiss"
 ,"MC: … Jajaja…"
 ,"Sus cejas querían desaparecer en su pelo, hace rato que no me sentía tan juzgada."
 ,"SV: Bueno, no te voy a dejar morir así nada más. Estaré repasando ahora por la tarde por si te dan ganas de salvar tu nota o algo así. "
-,"UNA OPORTUNIDAD DE PASAR MÁS TIEMPO CON ELLA"]
+,"Realmente es buena idea estudiar para el control, aunque aún podría decidir hacer algo mas","Hmmm, te buscaré si tengo tiempo. ¡Nos vemos!"]
 var dialog_index=0
 var finished = false
 

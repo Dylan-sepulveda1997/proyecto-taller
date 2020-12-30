@@ -7,7 +7,7 @@ var dialog =["Está sentado en la esquina del comedor más cercana a la entrada,
 ,"MC: ¿Te refieres a que llegue el juego o que termines tu trabajo?"
 ,"No sabía que era posible poner cara de “claramente no voy a priorizar mi trabajo antes que un videojuego”, pero ahora lo he visto."
 ,"GT:Anyways, te espero si estás libre en un rato."
-,"UNA OPORTUNIDAD DE PASAR MÁS TIEMPO CON EL"]
+,"¿Videojuegos! Es tentador, pero aun falta hablar con alguien...","MC: Hmm, te hablaré en un rato si tengo tiempo. ¡Nos vemos!"]
 var dialog_index=0
 var finished = false
 

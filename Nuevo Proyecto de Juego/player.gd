@@ -135,3 +135,27 @@ func _on_Area2D_body_entered(body):
 		else:
 			get_tree().change_scene("res://escenas/4/escenaprologosv.tscn")
 	pass # Replace with function body.
+
+
+func _on_sv2_body_entered(body):
+	if body.get_name()=="player":
+		get_tree().change_scene("res://escenas/2/escena2sv.tscn")
+	pass  # Replace with function body.
+
+
+func _on_gt1_body_entered(body):
+	if body.get_name()=="player":
+		get_tree().change_scene("res://escenas/2/escena1gtpelacion.tscn")
+	pass  # Replace with function body.
+
+
+func _on_gt2_body_entered(body):
+	if body.get_name()=="player":
+		get_tree().change_scene("res://escenas/2/escena2gt.tscn")
+	pass # Replace with function body.
+
+
+func _on_tv1_body_entered(body):
+		if body.get_name()=="player":
+			get_tree().change_scene("res://escenas/2/escena2tv.tscn")
+		pass # Replace with function body.
