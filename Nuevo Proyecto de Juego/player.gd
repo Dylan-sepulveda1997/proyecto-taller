@@ -15,6 +15,9 @@ onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
 
 var contadorMonedaVerde = 0
+var sv = 0
+var tomas = 0
+var gt = 0
 func _ready():
 	
 	$AnimationPlayer.play("IDLE")
@@ -60,8 +63,35 @@ func _physics_process(delta):
 #func _process(delta):
 #	pass
 
+ # Replace with function body.
 
-func _on_Area2D4_body_entered(body):
+
+# Replace with function body.
+
+
+func _on_gonzalo_body_exited(body):
+	if body.get_name()=="player":
+		if contadorMonedaVerde >=1 :
+			get_tree().change_scene("res://escenas/2/escena1gtpelacion.tscn")
+		#elif contadorMonedaVerde >=2:
+		#	get_tree().change_scene("res://escenas/2/dialogo2.tscn")
+		else:
+			get_tree().change_scene("res://escenas/2/escena1gt.tscn")
+	pass # Replace with function body.
+
+
+func _on_matias_body_entered(body):
+	if body.get_name()=="player":
+		if contadorMonedaVerde >=1 :
+			get_tree().change_scene("res://escenas/2/escena1svpelacion.tscn")
+		#elif contadorMonedaVerde >=2:
+		#	get_tree().change_scene("res://escenas/2/dialogo2.tscn")
+		else:
+			get_tree().change_scene("res://escenas/2/escena1sv.tscn")
+	pass # Replace with function body.
+
+
+func _on_sofia_body_entered(body):
 	if body.get_name()=="player":
 		if contadorMonedaVerde >=1 :
 			get_tree().change_scene("res://escenas/2/escena1svpelacion.tscn")
