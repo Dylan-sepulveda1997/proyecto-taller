@@ -40,6 +40,7 @@ var finished = false
 func _ready():
 	load_dialog()
 	
+	
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_Z:

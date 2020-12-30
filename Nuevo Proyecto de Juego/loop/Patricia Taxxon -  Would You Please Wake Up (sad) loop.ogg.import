@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Patricia Taxxon -  Would You Please Wake Up (sad) loop.ogg-716ee1bb7c71de0c5a0a3dd21377a938.oggstr"
+
+[deps]
+
+source_file="res://loop/Patricia Taxxon -  Would You Please Wake Up (sad) loop.ogg"
+dest_files=[ "res://.import/Patricia Taxxon -  Would You Please Wake Up (sad) loop.ogg-716ee1bb7c71de0c5a0a3dd21377a938.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

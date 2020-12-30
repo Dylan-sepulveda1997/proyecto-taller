@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://escenas/2/escena1sv.gd" type="Script" id=1]
 [ext_resource path="res://Simple Dialog Box/UI_SF_01.png" type="Texture" id=2]
 [ext_resource path="res://Simple Dialog Box/Retro Gaming.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://loop/Patricia Taxxon - Cilantro (sv) loop.ogg" type="AudioStream" id=4]
+[ext_resource path="res://escenas/2/audiosv1.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 23
@@ -38,3 +40,7 @@ margin_top = -127.0
 margin_right = -30.0
 margin_bottom = -38.0
 custom_fonts/normal_font = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+script = ExtResource( 5 )
