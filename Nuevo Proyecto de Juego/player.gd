@@ -42,7 +42,7 @@ func _physics_process(delta):
 			$AnimationPlayer.play("JUMP")
 			motion.y = -JUMP_FORCE
 	else:
-		if motion.x >= 0:
+		if motion.x > 0:
 			$Sprite.set_flip_h(false)
 		else:
 			$Sprite.set_flip_h(true)
