@@ -15,6 +15,7 @@ onready var sprite = $Sprite
 onready var animationPlayer = $AnimationPlayer
 
 var contadorMonedaVerde = 0
+var contadorMonedaRosa= 0
 func _ready():
 	
 	$AnimationPlayer.play("IDLE")
