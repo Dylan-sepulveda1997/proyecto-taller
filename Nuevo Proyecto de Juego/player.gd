@@ -101,3 +101,37 @@ func _on_sofia_body_entered(body):
 		else:
 			get_tree().change_scene("res://escenas/2/escena1sv.tscn")
 	pass # Replace with function body.
+
+
+func _on_Area2D3_body_entered(body):
+	if body.get_name()=="player":
+		if sv > 0 and tomas > 0 and gt > 0:
+			get_tree().change_scene("res://escenas/1/Node2D.tscn")
+		#elif contadorMonedaVerde >=2:
+		#	get_tree().change_scene("res://escenas/2/dialogo2.tscn")
+		else:
+			get_tree().change_scene("res://escenas/4/escenaprologotv.tscn")
+	pass # Replace with function body.
+
+
+func _on_Area2D2_body_entered(body):
+	if body.get_name()=="player":
+		if sv > 0 and tomas > 0 and gt > 0:
+			get_tree().change_scene("res://escenas/1/Node2D.tscn")
+		#elif contadorMonedaVerde >=2:
+		#	get_tree().change_scene("res://escenas/2/dialogo2.tscn")
+		else:
+			get_tree().change_scene("res://escenas/4/escenaprologogt.tscn")
+	pass
+	 # Replace with function body.
+
+
+func _on_Area2D_body_entered(body):
+	if body.get_name()=="player":
+		if sv > 0 and tomas > 0 and gt > 0:
+			get_tree().change_scene("res://escenas/1/Node2D.tscn")
+		#elif contadorMonedaVerde >=2:
+		#	get_tree().change_scene("res://escenas/2/dialogo2.tscn")
+		else:
+			get_tree().change_scene("res://escenas/4/escenaprologosv.tscn")
+	pass # Replace with function body.

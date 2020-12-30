@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Simple Dialog Box/UI_SF_01.png" type="Texture" id=1]
 [ext_resource path="res://Simple Dialog Box/Retro Gaming.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://escenas/2/escena2tv.gd" type="Script" id=3]
-[ext_resource path="res://escenas/2/AudioStreamPlayer.gd" type="Script" id=4]
-[ext_resource path="res://loop/Patricia Taxxon - Nine Stars (gt) loop.ogg" type="AudioStream" id=5]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 22
@@ -39,7 +38,3 @@ custom_fonts/normal_font = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
-script = ExtResource( 4 )
